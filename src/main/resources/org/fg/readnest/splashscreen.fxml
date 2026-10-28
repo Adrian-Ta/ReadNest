@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="191.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fg.readnest.LoginController">
+   <children>
+      <ImageView fitHeight="67.0" fitWidth="441.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@readnesttext.png" />
+         </image>
+         <VBox.margin>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </VBox.margin>
+      </ImageView>
+      <Label text="Wird geladen..." textAlignment="CENTER">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="loadingBar" prefHeight="12.0" prefWidth="456.0" progress="0.5">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </ProgressBar>
+   </children>
+</VBox>

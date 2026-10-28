@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="756.0" minWidth="507.0" prefHeight="757.0" prefWidth="519.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fg.readnest.ReaderController">
+   <children>
+      <ImageView fx:id="bookView" fitHeight="745.0" fitWidth="486.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@readerLoading.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="CENTER">
+         <children>
+            <Button fx:id="pageBackButton" mnemonicParsing="false" onAction="#onPageBackButtonClick" text="&lt;" wrapText="true">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <TextField fx:id="currentPage" alignment="TOP_RIGHT" onAction="#onPageTextFieldEnter" prefHeight="36.0" prefWidth="153.0" promptText="Seite">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Label fx:id="maxPage" alignment="CENTER" prefHeight="20.0" prefWidth="57.0" text="/ N/A" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <Button fx:id="pageNextButton" mnemonicParsing="false" onAction="#onPageNextButtonClick" text="&gt;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

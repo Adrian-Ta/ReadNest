@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_LEFT" prefHeight="724.0" prefWidth="601.0" spacing="20" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fg.readnest.AdminController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <Label styleClass="title-label" text="Adminübersicht">
+      <font>
+         <Font size="20.0" />
+      </font></Label>
+
+    <!-- Bücher-Verwaltung -->
+    <VBox spacing="10">
+        <Label styleClass="section-label" text="Bücher" />
+
+        <TableView fx:id="buchTable" prefHeight="200">
+            <columns>
+                <TableColumn fx:id="titelColumn" text="Titel" />
+                <TableColumn fx:id="isbnColumn" text="ISBN" />
+                <TableColumn fx:id="autorColumn" text="Autor" />
+                <TableColumn fx:id="verlagColumn" text="Verlag" />
+            </columns>
+        </TableView>
+    </VBox>
+
+    <!-- Autoren-Verwaltung -->
+    <VBox spacing="10">
+        <Label styleClass="section-label" text="Autoren" />
+
+        <TableView fx:id="autorTable" prefHeight="150">
+            <columns>
+                <TableColumn fx:id="autorNameColumn" text="Name" />
+            </columns>
+        </TableView>
+    </VBox>
+
+    <!-- Verlags-Verwaltung -->
+    <VBox spacing="10">
+        <Label styleClass="section-label" text="Verlage" />
+
+        <TableView fx:id="verlagTable" prefHeight="150">
+            <columns>
+                <TableColumn fx:id="verlagNameColumn" text="Bezeichnung" />
+            </columns>
+        </TableView>
+    </VBox>
+
+</VBox>
